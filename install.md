@@ -2,7 +2,7 @@
 
 AgentBubble installs a local `.agentbubble/` operating layer into a project.
 
-It does not install a CLI, package, dependency, automation script, editor extension, or agent runtime.
+It does not install an agent runtime, automation script, editor extension, hosted service, telemetry, or model API integration.
 
 Execution loop:
 
@@ -25,7 +25,13 @@ The installed files provide:
 
 ## Recommended Installation Method
 
-From the target project, use `prompts/install-agentbubble.md` with your coding agent.
+From the target project, run:
+
+`npx agentbubble init`
+
+The CLI copies `templates/base/.agentbubble/`, inspects deterministic local file signals, and customizes `context.md` and `architecture.md` without network calls.
+
+You can also use `prompts/install-agentbubble.md` with your coding agent.
 
 The agent should copy the base `.agentbubble/` template into the target project, inspect the project lightly, and customize `context.md` and `architecture.md`.
 
@@ -79,9 +85,7 @@ Adapters should point the tool to `.agentbubble/session-start.md` and relevant l
 - do not clone AgentBubble into every project root as a permanent dependency
 - do not make agents reread the public repo every session
 - do not paste the full framework every session
-- do not add package tooling
 - do not add dependencies
-- do not add a CLI
 - do not make `.agentbubble/` depend on a vendor, model, editor, CLI, or agent runtime
 
 Install local `.agentbubble/` once, customize it per project, then use tiny bootstrap prompts after install.

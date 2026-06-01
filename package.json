@@ -1,0 +1,23 @@
+{
+  "name": "agentbubble",
+  "version": "0.1.0",
+  "description": "A local operating layer for human-directed agentic engineering.",
+  "type": "module",
+  "bin": {
+    "agentbubble": "./bin/agentbubble.js"
+  },
+  "files": [
+    "bin/",
+    "lib/",
+    "templates/base/.agentbubble/",
+    "README.md",
+    "install.md"
+  ],
+  "scripts": {
+    "test": "node --test"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "license": "MIT"
+}

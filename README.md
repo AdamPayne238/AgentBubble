@@ -23,7 +23,7 @@ The goal is not autonomy. The goal is reliable execution under human direction.
 
 ## Execution Loop
 
-Context → Ticket Understanding → Plan → Minimal Implementation → Test → Audit → Fix → QA-Ready
+Context â†’ Ticket Understanding â†’ Plan â†’ Minimal Implementation â†’ Test â†’ Audit â†’ Fix â†’ QA-Ready
 
 The loop prevents agents from wandering through the codebase, expanding scope, or optimizing for plausible output instead of correct work.
 
@@ -31,7 +31,58 @@ The loop prevents agents from wandering through the codebase, expanding scope, o
 
 AgentBubble is installed into a project by creating a local `.agentbubble/` folder from the base template. After installation, agents should use the local `.agentbubble/` files as their operating context instead of rereading the public repo every session.
 
+CLI:
+
+`npx agentbubble init`
+
+The CLI is deterministic and local-only: it copies `templates/base/.agentbubble/`, scans file signals, fills known fields, and leaves unknowns marked.
+
 See [install.md](install.md) for the recommended install flow.
+
+## CLI Workflow
+
+1. Install the local operating layer:
+
+`npx agentbubble init`
+
+2. Fill `.agentbubble/current-ticket.md`, including declared scope, expected domains, forbidden domains, risky systems, and acceptance criteria.
+
+3. Work the coding session with your agent.
+
+4. Audit changed files before review:
+
+`npx agentbubble audit`
+
+Example drift output:
+
+```text
+Ticket Scope Audit
+
+Declared scope:
+- analytics
+- landing page CTA tracking
+
+Changed files:
+19
+
+Scope Drift:
+  WARNING    frontend/tsconfig.json
+
+Risky Changes:
+  HIGH RISK  frontend/auth/middleware.ts
+  HIGH RISK  frontend/app/api/payments/route.ts
+
+Clean Changes: 16
+
+Potential risks:
+- auth flow mutation
+- config drift
+- payment system touched
+
+WARNING    Large scope expansion detected
+
+Review recommended before merge.
+```
 
 ## Context Bubble
 

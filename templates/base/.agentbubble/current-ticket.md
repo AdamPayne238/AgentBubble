@@ -9,7 +9,24 @@
 ## Ticket Description
 
 
+## Declared Scope
+<!-- List directories, files, or glob patterns in scope -->
+
+
+## Expected Domains
+<!-- Expected directories/files likely to change -->
+
+
+## Forbidden Domains
+<!-- Paths the agent must not touch -->
+
+
+## Risky Systems
+<!-- auth / payments / migrations / config / infrastructure -->
+
+
 ## Acceptance Criteria
+<!-- Ticket success conditions -->
 
 
 ## Notes / Comments
@@ -34,4 +51,3 @@
 
 
 ## Final Summary
-
