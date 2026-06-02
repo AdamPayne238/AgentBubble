@@ -1,7 +1,7 @@
 {
   "name": "agentbubble",
-  "version": "0.1.1",
-  "description": "AgentBubble installs and audits a local operating layer for human-directed coding-agent work.",
+  "version": "0.1.2",
+  "description": "Run your agents with confidence. A local operating layer for coding agents.",
   "type": "module",
   "bin": {
     "agentbubble": "./bin/agentbubble.js"

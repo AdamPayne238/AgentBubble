@@ -1,6 +1,6 @@
 # Agent Bubble Operating System
 
-AgentBubbleOS is a practical operating system for human-directed agentic engineering.
+AgentBubble is a practical operating system for human-directed agentic engineering.
 
 It is built around one governing rule:
 

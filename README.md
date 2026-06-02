@@ -1,6 +1,11 @@
-# AgentBubbleOS
+# AgentBubble
 
-AgentBubbleOS is a practical operating system for human-directed agentic engineering.
+Run your agents with confidence.
+
+[![npm version](https://img.shields.io/npm/v/agentbubble)](https://www.npmjs.com/package/agentbubble)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+
+AgentBubble is a practical operating system for human-directed agentic engineering.
 
 It defines how experienced engineers safely work with coding agents in production environments: provide bounded context, clarify the ticket, implement minimally, test, audit, and prepare work for QA.
 
@@ -10,7 +15,7 @@ It defines how experienced engineers safely work with coding agents in productio
 
 Agents are powerful but stochastic. They can write useful code quickly, but they need clear boundaries, current context, and explicit acceptance criteria.
 
-AgentBubbleOS treats agent work as engineering work:
+AgentBubble treats agent work as engineering work:
 
 - preserve the existing architecture
 - follow established patterns
@@ -53,35 +58,20 @@ See [install.md](install.md) for the recommended install flow.
 
 `npx agentbubble audit`
 
-Example drift output:
+Example audit output:
 
 ```text
 Ticket Scope Audit
 
 Declared scope:
-- analytics
-- landing page CTA tracking
+- frontend/app/(app)/calendar/
 
 Changed files:
-19
+1
 
-Scope Drift:
-  WARNING    frontend/tsconfig.json
+Clean Changes: 1
 
-Risky Changes:
-  HIGH RISK  frontend/auth/middleware.ts
-  HIGH RISK  frontend/app/api/payments/route.ts
-
-Clean Changes: 16
-
-Potential risks:
-- auth flow mutation
-- config drift
-- payment system touched
-
-WARNING    Large scope expansion detected
-
-Review recommended before merge.
+No scope drift detected.
 ```
 
 ## Context Bubble
