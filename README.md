@@ -23,7 +23,7 @@ The goal is not autonomy. The goal is reliable execution under human direction.
 
 ## Execution Loop
 
-Context â†’ Ticket Understanding â†’ Plan â†’ Minimal Implementation â†’ Test â†’ Audit â†’ Fix â†’ QA-Ready
+Context → Ticket Understanding → Plan → Minimal Implementation → Test → Audit → Fix → QA-Ready
 
 The loop prevents agents from wandering through the codebase, expanding scope, or optimizing for plausible output instead of correct work.
 

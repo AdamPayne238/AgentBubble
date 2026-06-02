@@ -1,6 +1,6 @@
 {
   "name": "agentbubble",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "AgentBubble installs and audits a local operating layer for human-directed coding-agent work.",
   "type": "module",
   "bin": {
