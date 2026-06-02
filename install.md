@@ -25,11 +25,13 @@ The installed files provide:
 
 ## Recommended Installation Method
 
-From the target project, run:
+Step 1: From the target project, run:
 
 `npx agentbubble init`
 
 The CLI copies `templates/base/.agentbubble/`, inspects deterministic local file signals, and customizes `context.md` and `architecture.md` without network calls.
+
+Step 2: Use `prompts/fill-context.md` with Claude, Codex, or another coding agent to scan the codebase and fill remaining `[UNKNOWN]` fields in `.agentbubble/context.md` and `.agentbubble/architecture.md`.
 
 You can also use `prompts/install-agentbubble.md` with your coding agent.
 

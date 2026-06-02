@@ -1,7 +1,7 @@
 {
   "name": "agentbubble",
   "version": "0.1.0",
-  "description": "A local operating layer for human-directed agentic engineering.",
+  "description": "AgentBubble installs and audits a local operating layer for human-directed coding-agent work.",
   "type": "module",
   "bin": {
     "agentbubble": "./bin/agentbubble.js"
@@ -9,7 +9,9 @@
   "files": [
     "bin/",
     "lib/",
-    "templates/base/.agentbubble/",
+    "templates/",
+    "prompts/",
+    "skills/",
     "README.md",
     "install.md"
   ],
@@ -19,5 +21,17 @@
   "engines": {
     "node": ">=18"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AdamPayne238/AgentBubble.git"
+  },
+  "keywords": [
+    "agentbubble",
+    "agentic",
+    "coding-agent",
+    "claude",
+    "codex",
+    "cursor"
+  ],
   "license": "MIT"
 }
