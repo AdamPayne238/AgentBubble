@@ -56,3 +56,18 @@ Acceptance Criteria:
 Test Plan:
 
 Human Approval Needed:
+
+## Write-Back to current-ticket.md
+
+After outputting the Required First Response to chat, write findings
+back to `.agentbubble/current-ticket.md`:
+
+1. Fill `## Agent Intake Summary` with a brief summary of the problem,
+   proposed approach, and key risks.
+2. If `## Declared Scope` is empty, populate it with the files/patterns
+   identified as in scope. Do not overwrite if already filled.
+3. If `## Expected Domains` is empty, populate it with the files/patterns
+   expected to change. Do not overwrite if already filled.
+
+After the human approves the plan, write the approved implementation
+plan to `## Approved Plan`.
