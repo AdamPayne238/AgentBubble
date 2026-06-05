@@ -3,6 +3,27 @@
 import { initAgentBubble } from '../lib/init.js';
 import { runAudit } from '../lib/audit.js';
 
+const MASCOT = `
+                                                   -..:.
+                                                  -::::::
+                                              :::  -::..
+                                         -.--..--:=
+                                     .-..  . ....::..=-
+                                  --...........:.:::::::-
+                                 -:::..............:::::::=
+                                -::::.................:::::-
+                               -.:::...................:::::-
+                              =-::.:....%%........%%....::::-
+                              -.::::...%%%%......%%%%....::.:-
+                              -.-::......... %##........:::-:=
+                               -.::.....................::---
+                               -..:::::::.............:::.-:-
+                                :...::::::::::::::::::----:-
+                                 =:...::::::::--:::::::::-
+                                   -:..:------::.......:=
+                                      -:--:-::::..--:-
+`;
+
 function printHelp() {
   console.log(`AgentBubble
 
@@ -85,12 +106,14 @@ try {
       adapter: options.adapter
     });
 
+    console.log(MASCOT);
     console.log(result.summary);
   } else {
     const result = runAudit({
       projectRoot: process.cwd()
     });
 
+    console.log(MASCOT);
     console.log(result.report);
   }
 } catch (error) {

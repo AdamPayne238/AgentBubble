@@ -5,6 +5,10 @@ Run your agents with confidence.
 [![npm version](https://img.shields.io/npm/v/agentbubble)](https://www.npmjs.com/package/agentbubble)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
+<p align="center">
+  <img src="assets/logo.png" width="200" alt="AgentBubble" />
+</p>
+
 AgentBubble is a practical operating system for human-directed agentic engineering.
 
 It defines how experienced engineers safely work with coding agents in production environments: provide bounded context, clarify the ticket, implement minimally, test, audit, and prepare work for QA.
@@ -50,7 +54,7 @@ See [install.md](install.md) for the recommended install flow.
 
 `npx agentbubble init`
 
-2. Fill `.agentbubble/current-ticket.md`, including declared scope, expected domains, forbidden domains, risky systems, and acceptance criteria.
+2. Add your ticket to `.agentbubble/current-ticket.md` and tell your agent: "Ticket is ready. Begin intake."
 
 3. Work the coding session with your agent.
 
@@ -106,6 +110,9 @@ The difference is not tool choice. The difference is discipline:
 - testable acceptance criteria
 - diff inspection
 - QA readiness
+
+If AgentBubble saved you from a bad merge,
+drop a ⭐ — it helps others find it.
 
 ## Repository Contents
 
