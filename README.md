@@ -8,12 +8,9 @@ Run your agents with confidence.
 
 Give your coding agent context and constraints. Let it do the rest.
 
-<!-- Demo GIF placeholder: assets/agentbubble-demo.gif -->
-<!-- Replace this commented block when the VHS-generated GIF is added.
 <p align="center">
-  <img src="assets/agentbubble-demo.gif" alt="AgentBubble demo showing init, Claude/Codex handoff, and audit" width="900">
+  <img src="assets/agentbubble-claude-demo.gif" alt="AgentBubble init, then handing off to Claude Code with a single 'start' message" width="900">
 </p>
--->
 
 ## Install
 
