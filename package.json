@@ -1,7 +1,7 @@
 {
   "name": "agentbubble",
   "version": "0.1.4",
-  "description": "Run your agents with confidence. A local operating layer for coding agents.",
+  "description": "Stop coding agents from wandering outside the ticket. A local task contract for Claude Code, Codex, and Cursor.",
   "type": "module",
   "bin": {
     "agentbubble": "bin/agentbubble.js"

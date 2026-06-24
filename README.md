@@ -4,9 +4,11 @@
   <img src="assets/logo-text.png" width="420" alt="AgentBubble" />
 </p>
 
-Run your agents with confidence.
+Stop coding agents from wandering outside the ticket.
 
-Give your coding agent context and constraints. Let it do the rest.
+AgentBubble gives Claude Code, Codex, Cursor, and other coding agents a local task contract before they start editing.
+
+Initialize the project, define the scope, hand it to your agent, then audit the diff before review.
 
 <p align="center">
   <img src="assets/agentbubble-claude-demo.gif" alt="AgentBubble init, then handing off to Claude Code with a single 'start' message" width="900">
