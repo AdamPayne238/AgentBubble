@@ -1,10 +1,10 @@
 {
   "name": "agentbubble",
-  "version": "0.1.2",
-  "description": "Run your agents with confidence. A local operating layer for coding agents.",
+  "version": "0.1.4",
+  "description": "Stop coding agents from wandering outside the ticket. A local task contract for Claude Code, Codex, and Cursor.",
   "type": "module",
   "bin": {
-    "agentbubble": "./bin/agentbubble.js"
+    "agentbubble": "bin/agentbubble.js"
   },
   "files": [
     "bin/",
@@ -13,6 +13,7 @@
     "prompts/",
     "skills/",
     "README.md",
+    "CONTRIBUTING.md",
     "install.md"
   ],
   "scripts": {
@@ -25,6 +26,7 @@
     "type": "git",
     "url": "git+https://github.com/AdamPayne238/AgentBubble.git"
   },
+  "homepage": "https://github.com/AdamPayne238/AgentBubble#readme",
   "keywords": [
     "agentbubble",
     "agentic",

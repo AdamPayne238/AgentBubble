@@ -24,6 +24,42 @@ const MASCOT = `
                                       -:--:-::::..--:-
 `;
 
+const ANSI = {
+  reset: '\x1b[0m',
+  cyan: '\x1b[38;5;80m',
+  softCyan: '\x1b[38;5;45m',
+  purple: '\x1b[38;5;141m',
+  lavender: '\x1b[38;5;183m'
+};
+
+function supportsAnsiColor(stream = process.stdout, env = process.env) {
+  if (env.FORCE_COLOR === '0') return false;
+  if (env.NODE_DISABLE_COLORS === '1') return false;
+  if (Object.prototype.hasOwnProperty.call(env, 'NO_COLOR')) return false;
+  if (env.FORCE_COLOR) return true;
+  if (!stream.isTTY) return false;
+  if (env.TERM === 'dumb') return false;
+  return true;
+}
+
+function colorMascot(mascot, colorEnabled = supportsAnsiColor()) {
+  if (!colorEnabled) return mascot;
+
+  return mascot
+    .split('\n')
+    .map((line, index) => {
+      if (!line) return line;
+
+      const baseColor = index < 7 ? ANSI.softCyan : index > 14 ? ANSI.cyan : ANSI.purple;
+      const highlighted = line
+        .replaceAll('%%', `${ANSI.lavender}%%${baseColor}`)
+        .replace('%##', `${ANSI.lavender}%##${baseColor}`);
+
+      return `${baseColor}${highlighted}${ANSI.reset}`;
+    })
+    .join('\n');
+}
+
 function printHelp() {
   console.log(`AgentBubble
 
@@ -106,14 +142,14 @@ try {
       adapter: options.adapter
     });
 
-    console.log(MASCOT);
+    console.log(colorMascot(MASCOT));
     console.log(result.summary);
   } else {
     const result = runAudit({
       projectRoot: process.cwd()
     });
 
-    console.log(MASCOT);
+    console.log(colorMascot(MASCOT));
     console.log(result.report);
   }
 } catch (error) {
