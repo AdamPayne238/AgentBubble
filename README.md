@@ -1,14 +1,27 @@
 # AgentBubble
 
 <p align="center">
-  <img src="assets/logo-text.png" width="420" alt="AgentBubble" />
+  <img src="assets/logo.png" width="320" alt="AgentBubble" />
 </p>
 
-Stop coding agents from wandering outside the ticket.
+<h3 align="center">Stop coding agents from wandering outside the ticket.</h3>
 
-AgentBubble gives Claude Code, Codex, Cursor, and other coding agents a local task contract before they start editing.
+<p align="center">
+  AgentBubble gives Claude Code and Codex a local task contract before they start editing.<br />
+  Initialize the project, define the scope, hand it to your agent, then audit the diff before review.
+</p>
 
-Initialize the project, define the scope, hand it to your agent, then audit the diff before review.
+<p align="center">
+  <a href="#install"><strong>Install</strong></a> ·
+  <a href="#quick-start"><strong>Quick Start</strong></a> ·
+  <a href="#what-agentbubble-does"><strong>What It Does</strong></a> ·
+  <a href="#how-audit-works"><strong>How Audit Works</strong></a>
+</p>
+
+<p align="center">
+  <a href="https://www.npmjs.com/package/agentbubble"><img src="https://img.shields.io/npm/v/agentbubble" alt="npm version"></a>
+  <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="License: MIT"></a>
+</p>
 
 <p align="center">
   <img src="assets/agentbubble-claude-demo.gif" alt="AgentBubble init, then handing off to Claude Code with a single 'start' message" width="900">
@@ -66,9 +79,6 @@ AgentBubble is local-only. It does not install an agent runtime, hosted service,
 Coding agents work better when they have clear context, explicit constraints, and a small task contract.
 
 AgentBubble gives the agent a bounded place to start, then gives the human a quick audit of whether changed files match the declared scope.
-
-[![npm version](https://img.shields.io/npm/v/agentbubble)](https://www.npmjs.com/package/agentbubble)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 ## Claude Code / Codex / Cursor Usage
 
